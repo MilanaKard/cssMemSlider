@@ -132,3 +132,109 @@ input {
 #slide4:checked ~ .controls-container .text-slides {
   transform: translateX(-90em);
 }
+@media only screen and (max-width: 900px) {
+  .picture-slides-container {
+    height: 15em;
+    width: 30em;
+  }
+  .text-slides-container {
+    height: 3em;
+    width: 15em;
+  }
+  .picture-slide {
+    width: 30em;
+    height: 15em;
+  }
+
+  .text-slide {
+    height: 3em;
+    font-size: 1.3em;
+    width: 11.54em;
+  }
+
+  .controls-container {
+    width: 30em;
+  }
+  .label:after {
+    width: 0.5em;
+    height: 0.5em;
+  }
+
+  #slide1:checked ~ .picture-slides-container .picture-slides {
+    transform: translateX(0);
+  }
+  #slide1:checked ~ .controls-container .text-slides {
+    transform: translateX(0);
+  }
+
+  #slide2:checked ~ .picture-slides-container .picture-slides {
+    transform: translateX(-30em);
+  }
+
+  #slide2:checked ~ .controls-container .text-slides {
+    transform: translateX(-15em);
+  }
+
+  #slide3:checked ~ .picture-slides-container .picture-slides {
+    transform: translateX(-60em);
+  }
+  #slide3:checked ~ .controls-container .text-slides {
+    transform: translateX(-30em);
+  }
+
+  #slide4:checked ~ .picture-slides-container .picture-slides {
+    transform: translateX(-90em);
+  }
+
+  #slide4:checked ~ .controls-container .text-slides {
+    transform: translateX(-45em);
+  }
+}
+@media only screen and (max-width: 500px) {
+  .picture-slides-container {
+    height: 10em;
+    width: 20em;
+  }
+  .text-slides-container {
+    width: 20em;
+    order: 2;
+    align-self: flex-start;
+  }
+  .picture-slide {
+    width: 20em;
+    height: 10em;
+  }
+
+  .text-slide {
+    margin-top: 0;
+    width: 15.4em;
+  }
+  .controls-container {
+    flex-direction: column;
+    width: 20em;
+    align-self: center;
+  }
+  .controls {
+    order: 1;
+    align-self: center;
+  }
+  #slide1:checked ~ .picture-slides-container .picture-slides,
+  #slide1:checked ~ .controls-container .text-slides {
+    transform: translateX(0);
+  }
+
+  #slide2:checked ~ .picture-slides-container .picture-slides,
+  #slide2:checked ~ .controls-container .text-slides {
+    transform: translateX(-20em);
+  }
+
+  #slide3:checked ~ .picture-slides-container .picture-slides,
+  #slide3:checked ~ .controls-container .text-slides {
+    transform: translateX(-40em);
+  }
+
+  #slide4:checked ~ .picture-slides-container .picture-slides,
+  #slide4:checked ~ .controls-container .text-slides {
+    transform: translateX(-60em);
+  }
+}
