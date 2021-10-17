@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./images/background.jpg);
+}
+
+.picture-slides-container {
+  height: 27em;
+  width: 54em;
+  overflow: hidden;
+  align-self: center;
+}
+.text-slides-container {
+  height: 5em;
+  width: 30em;
+  overflow: hidden;
+  align-self: center;
+}
+
+.picture-slides,
+.text-slides {
+  display: flex;
+  width: max-content;
+  transition: all ease-in-out 0.5s;
+}
+
+.picture-slide {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 54em;
+  height: 27em;
+}
+
+.text-slide {
+  margin-top: 0.5em;
+  height: 5em;
+  font-size: 2em;
+  width: 15em;
+}
+
+.label {
+  display: block;
+  width: 2em;
+  height: 100%;
+  cursor: pointer;
+  transition: all ease-in-out 0.5s;
+}
+
+input {
+  display: none;
+}
+
+.label:after {
+  margin: 1.7em auto;
+  border: solid blue 0.1em;
+  background-color: blue;
+  content: " ";
+  display: block;
+  height: 1em;
+  width: 1em;
+  border-radius: 50%;
+  transition: all ease-in-out 0.5s;
+}
+.controls {
+  display: flex;
+}
+
+.label:hover::after {
+  background-color: #ddd;
+  border: solid #ddd 0.1em;
+}
+
+.label:active:after {
+  background-color: green;
+  border: solid green 0.1em;
+}
+
+.controls-container {
+  display: flex;
+  justify-content: space-between;
+  width: 54em;
+  align-self: center;
+}
+
+#slide1:checked ~ .controls-container .label1::after,
+#slide2:checked ~ .controls-container .label2::after,
+#slide3:checked ~ .controls-container .label3::after,
+#slide4:checked ~ .controls-container .label4::after {
+  background-color: transparent;
+}
+
+#slide1:checked ~ .picture-slides-container .picture-slides {
+  transform: translateX(0);
+}
+#slide1:checked ~ .controls-container .text-slides {
+  transform: translateX(0);
+}
+
+#slide2:checked ~ .picture-slides-container .picture-slides {
+  transform: translateX(-54em);
+}
+
+#slide2:checked ~ .controls-container .text-slides {
+  transform: translateX(-30em);
+}
+
+#slide3:checked ~ .picture-slides-container .picture-slides {
+  transform: translateX(-108em);
+}
+#slide3:checked ~ .controls-container .text-slides {
+  transform: translateX(-60em);
+}
+
+#slide4:checked ~ .picture-slides-container .picture-slides {
+  transform: translateX(-162em);
+}
+
+#slide4:checked ~ .controls-container .text-slides {
+  transform: translateX(-90em);
+}
