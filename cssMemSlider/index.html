@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Mem Slider</title>
+  </head>
+  <body>
+    <div class="container">
+      <input type="radio" name="point" id="slide1" checked />
+      <input type="radio" name="point" id="slide2" />
+      <input type="radio" name="point" id="slide3" />
+      <input type="radio" name="point" id="slide4" />
+
+      <div class="picture-slides-container">
+        <div class="picture-slides">
+          <div
+            class="picture-slide slide1"
+            style="background-image: url('./images/meme1.jpg')"
+          ></div>
+          <div
+            class="picture-slide slide2"
+            style="background-image: url('./images/meme2.jpg')"
+          ></div>
+          <div
+            class="picture-slide slide3"
+            style="background-image: url('./images/meme3.jpg')"
+          ></div>
+          <div
+            class="picture-slide slide4"
+            style="background-image: url('./images/meme4.jpg')"
+          ></div>
+        </div>
+      </div>
+
+      <div class="controls-container">
+        <div class="text-slides-container">
+          <div class="text-slides">
+            <p class="text-slide text1">Hard question.</p>
+            <p class="text-slide text2">My code.</p>
+            <p class="text-slide text3">Deadline is coming.</p>
+            <p class="text-slide text4">I am a winner.</p>
+          </div>
+        </div>
+        <div class="controls">
+          <label class="label label1" for="slide1"></label>
+          <label class="label label2" for="slide2"></label>
+          <label class="label label3" for="slide3"></label>
+          <label class="label label4" for="slide4"></label>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
